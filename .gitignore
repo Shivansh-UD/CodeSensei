@@ -5,3 +5,4 @@ __pycache__/
 fine_tuning/adapter/
 *.bin
 *.safetensors
+*.pdf
