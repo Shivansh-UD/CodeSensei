@@ -56,7 +56,6 @@ def getFile(repoUrl: str, filePath: str) -> str:
     url = f"https://api.github.com/repos/{owner2}/{repo2}/contents/{filePath}"  #filePath is basically like the end of the file paths where it usualy goes like /blob/main/agent1.py or similar stuff
     response = requests.get(url, headers=headers)
     data = response.json()
-    print(data)
     encoded_content = data["content"]
     decoded_bytes = base64.b64decode(encoded_content)
     raw_code = decoded_bytes.decode("utf-8")
